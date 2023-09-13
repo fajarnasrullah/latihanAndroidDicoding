@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Proyek akhir: Aplikasi Wisata Wonosobo</string>
+
+    <string name="destinasi_name">Nama Tempat Wisata</string>
+    <string name="description">Deskripsi</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string-array name="data_name">
+        <item>Gunung Sindoro</item>
+        <item>Gunung Sumbing</item>
+        <item>Gunung Prau</item>
+        <item>Gunung Kembang</item>
+        <item>Gunung Bismo</item>
+        <item>Telaga Menjer</item>
+        <item>Telaga Warna</item>
+        <item>Waduk Wadaslintang</item>
+        <item>Telaga Cebong</item>
+        <item>Telaga Pengilon</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>Gunung Sindoro terletak berdampingan dengan Gunung Sumbing dan memiliki ketinggian 3.150 mdpl. Gunung Sindoro terletak di Kabupaten Wonosobo dan Kabupaten Temanggung, gunung ini memiliki kawah besar yang disebut dengan ‘Kembang’, kawah ini memiliki lava kecil yang ada di puncak Gunung Sindoro</item>
+        <item>Gunung Sumbing adalah gunung yang memiliki ketinggian 3.340 meter di atas permukaan laut yang menjadikan gunung yang tertinggi kedua di Jawa Tengah setelah Gunung Slamet. Gunung ini terletak di tiga wilayah kabupaten di Jawa Tengah yaitu Kabupaten Wonosobo</item>
+        <item>Gunung Prau atau yang disebut dengan Gunung Prahu adalah wisata alam yang berada di dataran tinggi Dieng. Gunung Prau memiliki ketinggian 2.565 meter di atas permukaan laut. Gunung Prau menjadi gunung terfavorit di kalangan pendaki pemula, pasalnya Gunung Prau memiliki medan yang tidak terlalu sulit, selain itu Gunung Prau juga menyajikan panorama dan pemandangan alam yang sangat indah.</item>
+        <item>Gunung Kembang adalah salah satu gunung yang berada di Kabupaten Wonosobo. Kabupaten Wonosobo dikelilingi dengan beberapa gunung, yaitu Gunung Sumbing, Gunung Sindoro, Gunung Sikunir, Gunung Prau dan Gunung Kembang itu sendiri. Gunung Kembang terletak di Dukuh Blembem Kaliurip, Desa Damarkasihan, Kecamatan Kretek, Kabupaten Wonosobo. Gunung ini memiliki ketinggian sekitar 2.320 mdpl dan diyakini akan semakin bertambah.</item>
+        <item>Gunung Bismo adalah salah satu gunung yang berada di Dataran Tinggi Dieng, selain Gunung Prau dan Gunung Kembang. Gunung ini terletak di sebelah selatan dari Dataran Tinggi Dieng, Kabupaten Wonosobo. Gunung ini memiliki ketinggian sekitar 2.365 meter diatas permukaan laut (mdpl) yang memiliki puncak bernama Puncak Indrapasta.</item>
+        <item>Telaga Menjer ini terbentuk dari letusan Gunung Pakuwaja yang dulunya aktif. Sebelum terjadi letusan dari gunung berapi tersebut, tempat ini hanyalah sebuah mata air kecil. Telaga ini menjadi semakin dalam dan luas dengan dibangunnya bendungan.</item>
+        <item>Bukan hanya pemandangannya yang indah, namun udaranya begitu sejuk, terlebih di Dieng, karena berada di dataran tinggi.Tempat wisatanya juga unik dan tidak bisa ditemukan di tempat lain. Salah satunya adalah Telaga Warna. Danau belerang ini tentunya unik bagi wisatawan karena warnanya yang hijau kekuningan.</item>
+        <item>Waduk Wadaslintang termasuk bendungan tertinggi di Indonesia, dimana tingginya di atas 100 meter yang dibangun sekitar tahun 1988 berada di perbatasan Kabupaten Wonosobo dan Kabupaten Kebumen. Posisi bendungan yang berada di ketinggian membuat wisata di Waduk Wadaslintang menarik untuk dilakukan, spot self healing yang tenang dan damai.</item>
+        <item>Telaga Cebong salah satu spot wisata yang ada di sekitar Gunung Sikunir, sering dijadikan lokasi untuk mendirikan tenda. Gunung Sikunir sendiri sudah kami bahas di artikel sebelumnya. Gunung Sikunir atau Bukit Sikunir memiliki ketinggian sekitar 2.263 mdpl, spot terbaik untuk menikmati sunrise di pagi hari.</item>
+        <item>Dua telaga yang disbeut juga sebagai telaga kembar ini snagat berdekatan, wisata Telaga Pengilon sendiri letaknya berada di sebelah selatan telaga Warna dan juga bersebalahn dengan Situs Gia Dieng.</item>
+
+    </string-array>
+    <string-array name="data_photo">
+        <item>https://asset.kompas.com/crops/BsKaZgDllZ8iRKeDGbY05n-hQcM=/0x0:780x520/750x500/data/photo/2019/02/01/29443210931.jpg</item>
+        <item>https://cdn.idntimes.com/content-images/community/2023/01/gunung-sumbing-eaac9f3d32868405c5dfcd975ddf4ffc-ffa7008ec5b32cfecf8495f76eda7968.jpg</item>
+        <item>https://cdn.idntimes.com/content-images/community/2023/01/gunung-prau-eaac9f3d32868405c5dfcd975ddf4ffc-67b71a52797d154b7d63b5d5387cd9a1.jpeg</item>
+        <item>https://cdn.idntimes.com/content-images/community/2023/01/gunung-kembang1-eaac9f3d32868405c5dfcd975ddf4ffc-66a4ad2ed033025562ff6db5dc2eb119.jpg</item>
+        <item>https://cdn.idntimes.com/content-images/community/2022/12/master-2lvhu754d3-776-eaac9f3d32868405c5dfcd975ddf4ffc-8fd9eeb23df9afb6f7cb9ee67e737cf9.jpg</item>
+        <item>https://asset.kompas.com/crops/v8I7timt5QLg-u281UG7uprMaPw=/81x35:741x475/750x500/data/photo/2022/10/05/633d6e0f1a6c1.png</item>
+        <item>https://asset-2.tstatic.net/jogja/foto/bank/images/telaga-warna-dieng-wonosobo-ok.jpg</item>
+        <item>https://www.nativeindonesia.com/foto/2022/12/plta.jpg</item>
+        <item>https://www.nativeindonesia.com/foto/2023/01/telaga-cebong.jpg </item>
+        <item>https://3.bp.blogspot.com/-yl1Rf0H4MnM/V9QdN7IkN5I/AAAAAAAAABs/eT9L2dDuFdcdXuqJne6QnETVP88mqetJACLcB/s1600/Keajaiban%2BWisata%2BTelaga%2BPengilon%2BDieng%2BWonosobo%2B%2526%2BAsal-usulnya.jpg</item>
+    </string-array>
+</resources>
