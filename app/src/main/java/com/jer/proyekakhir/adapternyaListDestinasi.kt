@@ -1,5 +1,6 @@
 package com.jer.proyekakhir
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
-class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWisata>) : RecyclerView.Adapter<adapternyaListDestinasi.ListViewHolder>(){
+class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWisata>, val context: Context) : RecyclerView.Adapter<adapternyaListDestinasi.ListViewHolder>(){
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -17,10 +19,24 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
         this.onItemClickCallback = onItemClickCallback
     }
 
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_list)
-        val tvName: TextView = itemView.findViewById(R.id.tv_item_nameDesti)
-        val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
+    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bindItem(iniDesti:DestinasiWisata) {
+            val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_list)
+            val tvName: TextView = itemView.findViewById(R.id.tv_item_nameDesti)
+            val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
+
+            val imgPhoto2: ImageView = itemView.findViewById((R.id.imageDesti))
+            val tvName2: TextView = itemView.findViewById((R.id.judulDesti))
+            val tvDescription2: TextView = itemView.findViewById((R.id.deskripsiDesti))
+
+            tvName.text = iniDesti.nama_destinasi
+            tvDescription.text = iniDesti.deskripsi_destinasi
+            imgPhoto.setImageResource(iniDesti.gambar_destinasi)
+
+            tvName2.text = iniDesti.nama_destinasi
+            tvDescription2.text = iniDesti.deskripsi_destinasi
+            imgPhoto2.setImageResource(iniDesti.gambar_destinasi)
+        }
 //        val imgHalaman: ImageView = itemView.findViewById(R.id.imageDesti)
 //        val judulHalaman: TextView = itemView.findViewById(R.id.judulDesti)
 //        val deskripsiHalaman: TextView = itemView.findViewById(R.id.deskripsiDesti)
@@ -34,31 +50,40 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, description, photo) = listDestinasi[position]
-        Glide.with(holder.itemView.context)
-            .load(photo) // URL Gambar
-            .into(holder.imgPhoto)
-        holder.tvName.text = name
-        holder.tvDescription.text = description
+        holder.bindItem(listDestinasi[position])
+
+
+//        val iniDesti = listDestinasi[position]
+//        Glide.with(holder.itemView.context)
+//            .load(iniDesti.imgPhoto)
+////            .apply(RequestOptions().override(55, 55))
+//            .into(holder.photo)
+//        holder.tvName.text = iniDesti.tvName
+//        holder.tvDetail.text = iniDesti.tvDetail
+//        val (name, description, photo) = listDestinasi[position]
+//        Glide.with(holder.itemView.context)
+//            .load(photo) // URL Gambar
+//            .into(holder.imgPhoto)
+//        holder.tvName.text = name
+//        holder.tvDescription.text = description
         holder.itemView.setOnClickListener {
+            val getData = listDestinasi.get(position)
+            val DetailName: String = getData.nama_destinasi
+            val DetailDesc: String = getData.deskripsi_destinasi
+            val DetailPhoto: String = getData.gambar_destinasi
             onItemClickCallback.onItemClicked(listDestinasi[holder.adapterPosition])
             val intentDetail = Intent(holder.itemView.context, HalamanWisata::class.java)
             intentDetail.putExtra("key_hero", listDestinasi[holder.adapterPosition])
             holder.itemView.context.startActivity(intentDetail)
+
+            val moveToDetail = Intent(context, HalamanWisata::class.java)
+            moveToDetail.putExtra("mName", DetailName)
+            moveToDetail.putExtra("mDetail", DetailDesc)
+            moveToDetail.putExtra("mPhoto", DetailPhoto)
+            context.startActivity(moveToDetail)
         }
 
-//        val (name2, description2, photo2) = listDestinasi[position]
-//        Glide.with(holder.itemView.context)
-//            .load(photo2) // URL Gambar
-//            .into(holder.imgHalaman)
-//        holder.judulHalaman.text = name2
-//        holder.deskripsiHalaman.text = description2
-//        holder.itemView.setOnClickListener {
-//            onItemClickCallback.onItemClicked(listDestinasi[holder.adapterPosition])
-//            val intentDetail2 = Intent(holder.itemView.context, HalamanWisata::class.java)
-//            intentDetail2.putExtra("key_hero", listDestinasi[holder.adapterPosition])
-//            holder.itemView.context.startActivity(intentDetail2)
-//        }
+
     }
 
     override fun getItemCount(): Int = listDestinasi.size

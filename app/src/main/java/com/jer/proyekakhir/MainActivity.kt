@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecyclerList() {
         rv_destination.layoutManager = LinearLayoutManager(this)
-        val listDestinasiAdapter = adapternyaListDestinasi(list)
+        val listDestinasiAdapter = adapternyaListDestinasi(list, this)
 //        val halamanWisataAdapter = adapterHalamanWisata(list)
         rv_destination.adapter = listDestinasiAdapter
 //        rv_destination.adapter = halamanWisataAdapter
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showSelectedDestination(destinasi: DestinasiWisata) {
         Toast.makeText(this, "Pilihan Bagus " + destinasi.nama_destinasi, Toast.LENGTH_SHORT).show()
-        val listHeroAdapter = adapternyaListDestinasi(list)
+        val listHeroAdapter = adapternyaListDestinasi(list, this)
         listHeroAdapter.setOnItemClickCallback(object : adapternyaListDestinasi.OnItemClickCallback {
             override fun onItemClicked(data: DestinasiWisata) {
                 showSelectedDestination(data)
