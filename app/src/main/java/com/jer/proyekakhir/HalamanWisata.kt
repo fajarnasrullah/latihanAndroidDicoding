@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 
 class HalamanWisata : AppCompatActivity() {
@@ -46,12 +47,17 @@ class HalamanWisata : AppCompatActivity() {
 
         tvDetailName.text = namaHalaman
         tvDetailDescription.text = deskripsiHalaman
-        if (photoHalaman != null) {
-            ivDetailPhoto.setImageResource(photoHalaman)
-        }
+//        if (photoHalaman != null) {
+//            ivDetailPhoto.setImageResource(photoHalaman)
+//        }
+
         Glide.with(this)
             .load(photoHalaman)
+            .apply(RequestOptions().override(300,300))
             .into(ivDetailPhoto)
+//        Glide.with(this)
+//            .load(photoHalaman)
+//            .into(ivDetailPhoto)
 
 //        val dataHero = if (Build.VERSION.SDK_INT >= 33) {
 //            intent.getParcelableExtra<Person>(key_hero, DestinasiWisata::class.java)

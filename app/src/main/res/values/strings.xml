@@ -42,4 +42,7 @@
         <item>https://www.nativeindonesia.com/foto/2023/01/telaga-cebong.jpg </item>
         <item>https://3.bp.blogspot.com/-yl1Rf0H4MnM/V9QdN7IkN5I/AAAAAAAAABs/eT9L2dDuFdcdXuqJne6QnETVP88mqetJACLcB/s1600/Keajaiban%2BWisata%2BTelaga%2BPengilon%2BDieng%2BWonosobo%2B%2526%2BAsal-usulnya.jpg</item>
     </string-array>
+    <string name="nama_saya">Muhammad Fajar Nasrullah</string>
+    <string name="email_saya">nashrulljr01@gmail.com</string>
+    <string name="tombol_about">About</string>
 </resources>

@@ -10,12 +10,14 @@
     android:layout_marginTop="4dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="4dp"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="4dp"
+    card_view:cardBackgroundColor="@color/biruMuda">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:padding="10dp">
+
 
         <ImageView
             android:id="@+id/img_item_list"

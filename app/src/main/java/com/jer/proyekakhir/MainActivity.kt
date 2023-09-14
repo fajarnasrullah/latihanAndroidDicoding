@@ -1,5 +1,7 @@
 package com.jer.proyekakhir
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -23,22 +25,27 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(getListDestination())
         showRecyclerList()
+
+
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.menu_about, menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            R.id.action_list -> {
-//                rv_destination.layoutManager = LinearLayoutManager(this)
-//            }
-//
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_list -> {
+//                startActivity(Intent(this, page_about::class.java))
+//                val moveTopageabout2 = Intent(this, page_about::class.java)
+//                this.startActivity(moveTopageabout2)
+                rv_destination.layoutManager = GridLayoutManager(this, 2)
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
     private fun showRecyclerList() {
         rv_destination.layoutManager = LinearLayoutManager(this)

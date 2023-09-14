@@ -25,17 +25,23 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
             val tvName: TextView = itemView.findViewById(R.id.tv_item_nameDesti)
             val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
 
-            val imgPhoto2: ImageView = itemView.findViewById((R.id.imageDesti))
-            val tvName2: TextView = itemView.findViewById((R.id.judulDesti))
-            val tvDescription2: TextView = itemView.findViewById((R.id.deskripsiDesti))
+//            val imgPhoto2: ImageView = itemView.findViewById((R.id.imageDesti))
+//            val tvName2: TextView = itemView.findViewById((R.id.judulDesti))
+//            val tvDescription2: TextView = itemView.findViewById((R.id.deskripsiDesti))
+
+            val imgUrl = iniDesti.gambar_destinasi
 
             tvName.text = iniDesti.nama_destinasi
             tvDescription.text = iniDesti.deskripsi_destinasi
             imgPhoto.setImageResource(iniDesti.gambar_destinasi)
 
-            tvName2.text = iniDesti.nama_destinasi
-            tvDescription2.text = iniDesti.deskripsi_destinasi
-            imgPhoto2.setImageResource(iniDesti.gambar_destinasi)
+            Glide.with(itemView.context)
+                .load(imgUrl)
+                .apply(RequestOptions().override(300,300))
+                .into(imgPhoto)
+//            tvName2.text = iniDesti.nama_destinasi
+//            tvDescription2.text = iniDesti.deskripsi_destinasi
+//            imgPhoto2.setImageResource(iniDesti.gambar_destinasi)
         }
 //        val imgHalaman: ImageView = itemView.findViewById(R.id.imageDesti)
 //        val judulHalaman: TextView = itemView.findViewById(R.id.judulDesti)
@@ -52,6 +58,11 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.bindItem(listDestinasi[position])
 
+
+//        Glide.with(this)
+//            .load(imgPhoto)
+//            .apply(RequestOptions().override(300,300))
+//            .into(ivDetailPhoto)
 
 //        val iniDesti = listDestinasi[position]
 //        Glide.with(holder.itemView.context)
@@ -71,6 +82,8 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
             val DetailName: String = getData.nama_destinasi
             val DetailDesc: String = getData.deskripsi_destinasi
             val DetailPhoto: String = getData.gambar_destinasi
+
+
             onItemClickCallback.onItemClicked(listDestinasi[holder.adapterPosition])
             val intentDetail = Intent(holder.itemView.context, HalamanWisata::class.java)
             intentDetail.putExtra("key_hero", listDestinasi[holder.adapterPosition])
@@ -80,6 +93,12 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
             moveToDetail.putExtra("mName", DetailName)
             moveToDetail.putExtra("mDetail", DetailDesc)
             moveToDetail.putExtra("mPhoto", DetailPhoto)
+
+            val moveTopageabout = Intent(context, page_about::class.java)
+            moveTopageabout.putExtra("saya",DetailName)
+            moveTopageabout.putExtra("email_saya",DetailDesc)
+            moveTopageabout.putExtra("foto_saya",DetailPhoto)
+            context.startActivity(moveTopageabout)
             context.startActivity(moveToDetail)
         }
 
