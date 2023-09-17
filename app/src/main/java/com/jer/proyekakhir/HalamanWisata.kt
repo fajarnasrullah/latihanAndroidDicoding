@@ -40,13 +40,19 @@ class HalamanWisata : AppCompatActivity() {
         val tvDetailName : TextView = findViewById(R.id.judulDesti)
         val ivDetailPhoto : ImageView = findViewById(R.id.imageDesti)
         val tvDetailDescription : TextView= findViewById(R.id.deskripsiDesti)
+        val tvDetailLocation : TextView = findViewById(R.id.lokasiDesti)
+        val tvDetailTinggi : TextView = findViewById(R.id.tinggiLuasDesti)
 
         val namaHalaman = intent.getStringExtra("mName")
         val photoHalaman = intent.getStringExtra("mPhoto")
         val deskripsiHalaman = intent.getStringExtra("mDetail")
+        val lokasiHalaman = intent.getStringExtra("mLokasi")
+        val tinggiHalaman = intent.getStringExtra("mTinggi")
 
         tvDetailName.text = namaHalaman
         tvDetailDescription.text = deskripsiHalaman
+        tvDetailLocation.text = lokasiHalaman
+        tvDetailTinggi.text = tinggiHalaman
 //        if (photoHalaman != null) {
 //            ivDetailPhoto.setImageResource(photoHalaman)
 //        }

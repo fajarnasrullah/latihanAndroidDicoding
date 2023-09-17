@@ -14,14 +14,11 @@ class page_about : AppCompatActivity() {
         val fotoku : ImageView = findViewById(R.id.fotoKu)
         val emailku : TextView = findViewById(R.id.emailKu)
 
-        val namaku2= intent.getStringExtra("saya")
-        val emailku2 = intent.getStringExtra("email_saya")
-        val fotoku2 = intent.getStringExtra("foto_saya")
+        val getStringNamaku= resources.getString(R.string.nama_saya)
+        val getStringEmailku = resources.getString(R.string.email_saya)
 
-        namaku.text = namaku2
-        emailku.text = emailku2
-        if (fotoku2 != null) {
-            fotoku.setImageResource(fotoku2)
-        }
+        namaku.text = getStringNamaku
+        emailku.text = getStringEmailku
+        fotoku.setImageResource(R.drawable.me)
     }
 }

@@ -6,23 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".HalamanWisata">
 
-    <LinearLayout
-
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:layout_height="wrap_content">
 
 
         <ImageView
             android:id="@+id/imageDesti"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
             android:adjustViewBounds="true"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
 
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:src="@drawable/sindoro" />
 
         <TextView
@@ -36,7 +37,34 @@
             android:textStyle="bold"
 
 
+            app:layout_constraintEnd_toEndOf="@+id/imageDesti"
+            app:layout_constraintStart_toStartOf="@+id/imageDesti"
             app:layout_constraintTop_toBottomOf="@+id/imageDesti" />
+
+        <TextView
+            android:id="@+id/lokasiDesti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:layout_marginTop="20dp"
+            android:text="@string/location"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/judulDesti"
+            app:layout_constraintStart_toStartOf="@+id/judulDesti"
+            app:layout_constraintTop_toBottomOf="@+id/judulDesti" />
+
+        <TextView
+            android:id="@+id/tinggiLuasDesti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="@string/heightOrlarge"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/judulDesti"
+            app:layout_constraintStart_toStartOf="@+id/judulDesti"
+            app:layout_constraintTop_toBottomOf="@+id/lokasiDesti" />
 
         <TextView
             android:id="@+id/deskripsiDesti"
@@ -44,10 +72,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
 
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/description"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/judulDesti"
+            app:layout_constraintStart_toStartOf="@+id/judulDesti"
+            app:layout_constraintTop_toBottomOf="@+id/tinggiLuasDesti" />
 
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

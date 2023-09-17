@@ -82,6 +82,8 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
             val DetailName: String = getData.nama_destinasi
             val DetailDesc: String = getData.deskripsi_destinasi
             val DetailPhoto: String = getData.gambar_destinasi
+            val DetailLokasi: String = getData.lokasi_destinasi
+            val DetailTinggi: String = getData.tinggi_luas_destinasi
 
 
             onItemClickCallback.onItemClicked(listDestinasi[holder.adapterPosition])
@@ -93,14 +95,17 @@ class adapternyaListDestinasi (private val listDestinasi: ArrayList<DestinasiWis
             moveToDetail.putExtra("mName", DetailName)
             moveToDetail.putExtra("mDetail", DetailDesc)
             moveToDetail.putExtra("mPhoto", DetailPhoto)
+            moveToDetail.putExtra("mLokasi", DetailLokasi)
+            moveToDetail.putExtra("mTinggi", DetailTinggi)
 
-            val moveTopageabout = Intent(context, page_about::class.java)
-            moveTopageabout.putExtra("saya",DetailName)
-            moveTopageabout.putExtra("email_saya",DetailDesc)
-            moveTopageabout.putExtra("foto_saya",DetailPhoto)
-            context.startActivity(moveTopageabout)
+//            val moveTopageabout = Intent(context, page_about::class.java)
+//            moveTopageabout.putExtra("saya",DetailName)
+//            moveTopageabout.putExtra("email_saya",DetailDesc)
+//            moveTopageabout.putExtra("foto_saya",DetailPhoto)
+//            context.startActivity(moveTopageabout)
             context.startActivity(moveToDetail)
         }
+
 
 
     }

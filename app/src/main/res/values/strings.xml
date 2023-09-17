@@ -3,6 +3,8 @@
 
     <string name="destinasi_name">Nama Tempat Wisata</string>
     <string name="description">Deskripsi</string>
+    <string name="location">Lokasi</string>
+    <string name="heightOrlarge">Ketinggian/Luas</string>
     <string name="list">List</string>
     <string name="grid">Grid</string>
     <string-array name="data_name">
@@ -41,6 +43,31 @@
         <item>https://www.nativeindonesia.com/foto/2022/12/plta.jpg</item>
         <item>https://www.nativeindonesia.com/foto/2023/01/telaga-cebong.jpg </item>
         <item>https://3.bp.blogspot.com/-yl1Rf0H4MnM/V9QdN7IkN5I/AAAAAAAAABs/eT9L2dDuFdcdXuqJne6QnETVP88mqetJACLcB/s1600/Keajaiban%2BWisata%2BTelaga%2BPengilon%2BDieng%2BWonosobo%2B%2526%2BAsal-usulnya.jpg</item>
+    </string-array>
+
+    <string-array name="data_kecamatan">
+        <item>Lokasi: Kecamatan Ngadirejo</item>
+        <item>Lokasi: Kecamatan Tjepit</item>
+        <item>Lokasi: Kecamatan Kejajar</item>
+        <item>Lokasi: Kecamatan Kretek</item>
+        <item>Lokasi: Kecamatan Kejajar</item>
+        <item>Lokasi: Kecamatan Garung</item>
+        <item>Lokasi: Kecamatan Kejajar</item>
+        <item>Lokasi: Kecamatan Wadaslintang</item>
+        <item>Lokasi: Kecamatan Kejajar</item>
+        <item>Lokasi: Kecamatan Kejajar</item>
+    </string-array>
+    <string-array name="data_tinggi_luas">
+        <item>Ketinggian: 3150 mdpl</item>
+        <item>Ketinggian: 3.340 mdpl</item>
+        <item>Ketinggian: 2.565  mdpl</item>
+        <item>Ketinggian: 2.320 mdpl</item>
+        <item>Ketinggian: 2.365 mdpl</item>
+        <item>Luas: 700.000 m2</item>
+        <item>Luas: 400.000 m2</item>
+        <item>Luas: 13.200 m2</item>
+        <item>Luas: 120.000 m2</item>
+        <item>Luas: 396.000 m2</item>
     </string-array>
     <string name="nama_saya">Muhammad Fajar Nasrullah</string>
     <string name="email_saya">nashrulljr01@gmail.com</string>

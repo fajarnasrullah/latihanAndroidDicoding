@@ -14,9 +14,8 @@
             android:id="@+id/fotoKu"
             android:layout_width="237dp"
             android:layout_height="261dp"
-
-
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,13 +28,12 @@
             android:id="@+id/namaKu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
             android:text="@string/nama_saya"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/fotoKu"
-            app:layout_constraintHorizontal_bias="0.416"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/fotoKu"
             app:layout_constraintTop_toBottomOf="@+id/fotoKu" />
 
@@ -47,13 +45,13 @@
             android:layout_marginBottom="30dp"
             android:text="@string/email_saya"
             android:textColor="@color/biruTua"
-            android:textSize="25sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/fotoKu"
-            app:layout_constraintHorizontal_bias="0.608"
+            app:layout_constraintHorizontal_bias="0.453"
             app:layout_constraintStart_toStartOf="@+id/fotoKu"
             app:layout_constraintTop_toBottomOf="@+id/namaKu"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <!--        <TextView-->
